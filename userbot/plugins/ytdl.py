@@ -198,8 +198,8 @@ async def download_video(v_url):
         await v_url.delete()
     elif video:
         await v_url.edit(f"Caricando video:"\
-        \n**{ytdl_data['title']}**
-        \nby *{ytdl_data['uploader']}*")
+        \n"**{ytdl_data['title']}**"
+        \nby "**{ytdl_data['uploader']}*")
         await v_url.client.send_file(
             v_url.chat_id,
             f"{ytdl_data['id']}.mp4",
