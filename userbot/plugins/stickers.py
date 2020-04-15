@@ -57,7 +57,7 @@ async def _(event):
         packshortname = "AnonHexo_Pack"
     else:
         packname = f"{user.first_name} vol.{pack} by @AnonHexoUserBot"
-        packshortname = f"pack_{userid}_vol.{pack}"
+        packshortname = f"pack_{userid}_vol{pack}"
     await event.edit("`Look dat way,it's a gurl!\nMeanwhile, lemme kang this stcker over hehe ヽ༼ ಠ益ಠ ༽ﾉ`")
 
     is_a_s = is_it_animated_sticker(reply_message)
@@ -72,7 +72,7 @@ async def _(event):
             packshortname = "AnonHexo_it__Animated"
         else:
             packname = f"{user.first_name} vol.{pack} by @AnonHexoUserBot"
-            packshortname = f"pack_{userid}_vol.{pack}" # format: Uni_Borg_userid
+            packshortname = f"pack_{userid}_vol{pack}" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -133,13 +133,13 @@ async def _(event):
                     pack += 1
                     prevv = int(pack) - 1
                     packname = f"{user.first_name} vol.{pack} by @AnonHexoUserBot"
-                    packshortname = f"pack_{userid}_vol.{pack}"
+                    packshortname = f"pack_{userid}_vol{pack}"
                     #if userid == 948408212:
-                       # packname = f"{user.first_name}'s AnonHexoBot Vol.{pack}"
-                       # packshortname = "pack_{userid}_vol.{pack}"
+                       # packname = f"{user.first_name} vol.{pack} by @AnonHexoUserBot"
+                       # packshortname = "pack_{userid}_vol{pack}"
                    # else:
                        # packname = f"{user.first_name} vol.{pack} by @AnonHexoUserBot"
-                        #packshortname = f"pack_{userid}_vol.{pack}"
+                        #packshortname = f"pack_{userid}_vol{pack}"
                     if not await stickerset_exists(bot_conv, packshortname):
                         await event.edit("**Pack No. **" + str(prevv) + "** full! Making a new Pack, Vol. **" + str(pack))
                         if is_a_s:
@@ -192,7 +192,7 @@ async def _(event):
                 await silently_send_message(bot_conv, response)
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
-    await event.edit(f"sticker added! Your pack can be found [here](t.me/addstickers/{packshortname})")
+    await event.edit(f"Sticker added! Your pack can be found [here](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd(pattern="packinfo"))
