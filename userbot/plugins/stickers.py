@@ -1,6 +1,6 @@
 """Make / Download Telegram Sticker Packs without installing Third Party applications
 Available Commands:
-.kangsticker [Optional Emoji]
+.robba [Optional Emoji]
 .packinfo
 .getsticker"""
 from telethon import events
@@ -32,12 +32,12 @@ from userbot import ALIVE_NAME
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "AnonHexo"
 FILLED_UP_DADDY = "Invalid pack selected."
 
-@borg.on(admin_cmd(pattern="kang ?(.*)"))
+@borg.on(admin_cmd(pattern="robba ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
     if not event.is_reply:
-        await event.edit("Reply to a photo to add to my personal sticker pack.")
+        await event.edit("Rispondi ad una foto o sticker per robbare.")
         return
     reply_message = await event.get_reply_message()
     sticker_emoji = "🔥"
@@ -58,7 +58,7 @@ async def _(event):
     else:
         packname = f"{user.first_name} vol.{pack} by @AnonHexoUserBot"
         packshortname = f"pack_{userid}_vol{pack}"
-    await event.edit("`Look dat way,it's a gurl!\nMeanwhile, lemme kang this stcker over hehe ヽ༼ ಠ益ಠ ༽ﾉ`")
+    await event.edit("Oh fra guarda li c'è una mosca!\nNel mentre... Fammi robbare questo bello sticker ヽ༼ ಠ益ಠ ༽ﾉ")
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "@AnonHexo.png"
@@ -82,7 +82,7 @@ async def _(event):
             sticker.seek(0)
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
-    await event.edit("Processing this sticker. Please Wait!")
+    await event.edit("Robbando sticker... Aspetta!!")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
@@ -192,7 +192,7 @@ async def _(event):
                 await silently_send_message(bot_conv, response)
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
-    await event.edit(f"Sticker added! Your pack can be found [here](t.me/addstickers/{packshortname})")
+    await event.edit(f"Sticker robbato! Lo puoi trovare nei pm con il bot Stickers"
 
 
 @borg.on(admin_cmd(pattern="packinfo"))
