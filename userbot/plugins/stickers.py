@@ -32,7 +32,7 @@ from userbot import ALIVE_NAME
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "AnonHexo"
 FILLED_UP_DADDY = "Invalid pack selected."
 
-@borg.on(admin_cmd(pattern="robba ?(.*)"))
+@borg.on(admin_cmd(pattern="kang ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
