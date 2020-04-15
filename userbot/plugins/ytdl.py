@@ -40,7 +40,7 @@ async def progress(current, total, event, start, type_of_ps, file_name=None):
                 time_formatter(estimated_total_time)
             )
         if file_name:
-            await event.edit("{}\nFile Name: `{}`\n{}".format(
+            await event.edit("{}\nNome File: `{}`\n{}".format(
                 type_of_ps, file_name, tmp))
         else:
             await event.edit("{}\n{}".format(type_of_ps, tmp))
@@ -69,11 +69,11 @@ def time_formatter(milliseconds: int) -> str:
     minutes, seconds = divmod(seconds, 60)
     hours, minutes = divmod(minutes, 60)
     days, hours = divmod(hours, 24)
-    tmp = ((str(days) + " day(s), ") if days else "") + \
-        ((str(hours) + " hour(s), ") if hours else "") + \
-        ((str(minutes) + " minute(s), ") if minutes else "") + \
-        ((str(seconds) + " second(s), ") if seconds else "") + \
-        ((str(milliseconds) + " millisecond(s), ") if milliseconds else "")
+    tmp = ((str(days) + " giorni, ") if days else "") + \
+        ((str(hours) + " ore, ") if hours else "") + \
+        ((str(minutes) + " minuti, ") if minutes else "") + \
+        ((str(seconds) + " secondi, ") if seconds else "") + \
+        ((str(milliseconds) + " millisecondi, ") if milliseconds else "")
     return tmp[:-2]
 
 @borg.on(admin_cmd(pattern="yt(a|v) (.*)"))
@@ -144,7 +144,7 @@ async def download_video(v_url):
         video = True
 
     try:
-        await v_url.edit("`Fetching data, please wait..`")
+        await v_url.edit("@AnonHexoUserBot - Cercando i dati...")
         with YoutubeDL(opts) as ytdl:
             ytdl_data = ytdl.extract_info(url)
     except DownloadError as DE:
@@ -178,7 +178,7 @@ async def download_video(v_url):
         return
     c_time = time.time()
     if song:
-        await v_url.edit(f"`Preparing to upload song:`\
+        await v_url.edit(f"Caricando canzone:\
         \n**{ytdl_data['title']}**\
         \nby *{ytdl_data['uploader']}*")
         await v_url.client.send_file(
@@ -192,12 +192,12 @@ async def download_video(v_url):
             ],
             progress_callback=lambda d, t: asyncio.get_event_loop(
             ).create_task(
-                progress(d, t, v_url, c_time, "Uploading..",
+                progress(d, t, v_url, c_time, "Caricando...",
                          f"{ytdl_data['title']}.mp3")))
         os.remove(f"{ytdl_data['id']}.mp3")
         await v_url.delete()
     elif video:
-        await v_url.edit(f"`Preparing to upload video:`\
+        await v_url.edit(f"Caricando video:"\
         \n**{ytdl_data['title']}**\
         \nby *{ytdl_data['uploader']}*")
         await v_url.client.send_file(
