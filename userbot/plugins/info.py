@@ -48,15 +48,15 @@ async def _(event):
         location = str(e)
     caption = """⚙️ DATABASE 
     
-🔖ID: <code>{}</code>
-🔍NOME: <a href='tg://user?id={}'>{}</a>
-✍️BIO: {}
-🌏DC ID: {}
-🖼PIC PROFILO: {}
-🔏LIMITATO: {}
-🌐VERIFICATO: {}
-🤖BOT: {}
-👥GRUPPI IN COMUNE: {}
+🔖 **ID:** <code>{}</code>
+🔍 **LINK PERMANENTE AL PROFILO:** <a href='tg://user?id={}'>{}</a>
+✍️ **BIO:** {}
+🌏 **DC ID:** {}
+🖼 **PIC PROFILO:** {}
+🔏 **LIMITATO:** {}
+🌐 **VERIFICATO:** {}
+🤖 **BOT:** {}
+👥 **GRUPPI IN COMUNE:** {}
 """.format(
         user_id,
         user_id,
