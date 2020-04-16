@@ -15,5 +15,5 @@ async def amireallyalive(alive):
                      "🔹Tetethon Version: 7.0.1\n🔹Python Version: 3.8.0\n🔸**SUPPORT & UPDATE: @AnonHexoUserBot **\n"
                      "🔸**BOT CREATOR:** [AnonHexo](tg://user?id=304506948) **\n"
                      "🔹**CPU:** Ok \n\n🎲 **__USER DATA__** 🎲\n"
-                     f"🔸**USER:** {DEFAULTUSER}\n"
-                     "🔸[REPOSITORY USERBOT](https://github.com/AnonHexo)")
+                     f"🔸 **USER:** __{DEFAULTUSER}__\n"
+                     "🔸[REPOSITORY USERBOT](https://github.com/AnonHexo/Telegram-UserBot)")
