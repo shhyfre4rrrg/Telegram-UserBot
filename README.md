@@ -1,4 +1,5 @@
 # TELEGRAM USERBOT ITA
+##### Assicurati di essere con il brower sul pc oppure usa la modalità Desktop
 
 ### Come Installare il Bot?
 
