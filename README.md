@@ -28,7 +28,7 @@ Entra sul canale ***[Telegram ufficiale](https://t.me/AnonHexoUserBot)*** per ag
 
 
 
-# CREDITS TO:
+## CREDITS TO:
 
 *thanks a lot at the developers to make public their awesome bot, permitting me to impove it and translate it!*
 
