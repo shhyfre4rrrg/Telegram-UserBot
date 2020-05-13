@@ -1,5 +1,6 @@
 # TELEGRAM USERBOT ITA
 ###### Assicurati di essere con il brower sul pc oppure usa la modalità Desktop
+NON MI ASSUMO NESSUNA RESPONSABILITÀ PER QUELLO CHE FARETE CON QUESTO USERBOT
 
 ***
 
