@@ -1,10 +1,6 @@
-# For @UniBorg
-
-# Courtesy @yasirsiddiqui
-
 """
 
-.leave
+.bye
 
 """
 
@@ -26,7 +22,7 @@ async def leave(e):
 
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
 
-        await e.edit("`Esco dalla chat!`")
+        await e.edit("Addio, adesso esplodo...")
 
         time.sleep(3)
 
@@ -36,4 +32,4 @@ async def leave(e):
 
         else:
 
-            await e.edit('`Non puoi uscire dalla chat`')
+            await e.edit('Ah no, non posso uscire dalla chat :(')
