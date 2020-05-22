@@ -3,7 +3,7 @@ Syntax: .coronavirus <country>"""
 from covid import Covid
 from userbot.utils import admin_cmd
 
-@borg.on(admin_cmd(pattern="coronavirus (.*)"))
+@borg.on(admin_cmd(pattern="coronavirus (paese*)"))
 async def _(event):
     covid = Covid()
     data = covid.get_data()
