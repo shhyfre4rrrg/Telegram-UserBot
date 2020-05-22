@@ -46,9 +46,9 @@ async def _(event):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
-            await borg.send_message(event.chat_id, f"**     ⛔️ AL MOMENTO SONO OFFLINE.** **\nQUINDI NON SPAMMATE NELLA CHAT, GRAZIE 🌈** **\nRISPONDERO APPENA SONO DISPONIBILE! \n〽️** __MOTIVO ~ {reason}__ \n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n**.     ⛔️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🌈** \n**I'LL AWNSER AS SOON AS POSIBLE! \n〽️** __REASON ~ {reason}__")
+            await borg.send_message(event.chat_id, f"**⛔️ AL MOMENTO SONO OFFLINE.** **\nQUINDI NON SPAMMATE NELLA CHAT, GRAZIE 🌈** **\nRISPONDERO APPENA SONO DISPONIBILE! \n〽️** __MOTIVO ~ {reason}__ \n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n**⛔️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🌈** \n**I'LL AWNSER AS SOON AS POSIBLE! \n〽️** __REASON ~ {reason}__")
         else:
-            await borg.send_message(event.chat_id, f"**  🔒 __adesso sono AFK__  **\n\n- - - - - -\n\n**🔒 __i'm now AFK__**")
+            await borg.send_message(event.chat_id, f"**⛔️ AL MOMENTO SONO OFFLINE.** **\nQUINDI NON SPAMMATE NELLA CHAT, GRAZIE 🌈** **\nRISPONDERO APPENA SONO DISPONIBILE! \n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n**⛔️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🌈** \n**I'LL AWNSER AS SOON AS POSIBLE!**")
         await asyncio.sleep(5)
         await event.delete()
         try:
@@ -73,7 +73,7 @@ async def set_not_afk(event):
         total_afk_time = str((afk_end - afk_start))
     current_message = event.message.message
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
-        shite = await borg.send_message(event.chat_id, "__🎲 ** Non sono più AFK! **  🎲 __\n**🔸 Ora puoi scrivermi.**\n**🔹 Sono stato afk per:**" + total_afk_time + "\n **__UserBot afk system by @AnonHexo__**")
+        shite = await borg.send_message(event.chat_id, "__🎲 ** Not anymore AFK! **  🎲 __")
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
@@ -82,7 +82,7 @@ async def set_not_afk(event):
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
-                "Please set `PRIVATE_GROUP_BOT_API_ID` " + \
+                "Inserisci `PRIVATE_GROUP_BOT_API_ID` " + \
                 "per far funzionare afk " + \
                 "in @xtratgbot\nCerca il messaggio per info.\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
