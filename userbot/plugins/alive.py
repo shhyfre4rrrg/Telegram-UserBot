@@ -12,8 +12,8 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "senza nome"
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     await alive.edit("**🎲 __ANONHEXO USERBOT STATUS__ 🎲**\n\n"
-                     "🔹Tetethon Version: 7.0.1\n🔹Python Version: 3.8.0\n🔸**SUPPORT & UPDATE: @AnonHexoUserBot **\n"
-                     "🔸**BOT CREATOR:** [AnonHexo](tg://user?id=304506948) **\n"
-                     "🔹**CPU:** Ok \n\n🎲 **__USER DATA__** 🎲\n"
+                     "🔹Tetethon Version: 7.0.1\n🔹Python Version: 3.8.0\n"
+                     "🔸**DEVELOPER:** [AnonHexo](tg://user?id=304506948) **\n"
+                     "🔹**ALIVE:** true \n\n🎲 **__USER DATA__** 🎲\n"
                      f"🔸 **USER:** __{DEFAULTUSER}__\n"
-                     "🔸[REPOSITORY USERBOT](https://github.com/AnonHexo/Telegram-UserBot)")
+                     "🔸[GitHub](https://bit.ly/2AUU2gd)")
