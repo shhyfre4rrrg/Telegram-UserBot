@@ -11,8 +11,8 @@ import random
 
 from userbot.utils import admin_cmd
 
-@borg.on(admin_cmd(pattern=f"hps", allow_sudo=True))
-@borg.on(events.NewMessage(pattern=r"\.hps", outgoing=True))
+@borg.on(admin_cmd(pattern=f"harrypotter", allow_sudo=True))
+@borg.on(events.NewMessage(pattern=r"\.harrypotter", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
