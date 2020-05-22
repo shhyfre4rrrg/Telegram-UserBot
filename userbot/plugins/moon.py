@@ -20,7 +20,7 @@ from userbot import CMD_HELP
 
 from userbot.utils import admin_cmd
 
-@borg.on(admin_cmd(pattern=f"smoon", allow_sudo=True))
+@borg.on(admin_cmd(pattern=f"luna", allow_sudo=True))
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 
 async def _(event):
@@ -35,7 +35,7 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "smoon":
+    if input_str == "luna":
 
         await event.edit(input_str)
 
@@ -61,7 +61,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd(pattern=f"tmoon", allow_sudo=True))
+@borg.on(admin_cmd(pattern=f"sluna", allow_sudo=True))
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 
 async def _(event):
@@ -76,7 +76,7 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "tmoon":
+    if input_str == "sluna":
 
         await event.edit(input_str)
 
