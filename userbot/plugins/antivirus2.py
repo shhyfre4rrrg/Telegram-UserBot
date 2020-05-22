@@ -10,30 +10,30 @@ async def _(event):
     if event.fwd_from:
         return 
     if not event.reply_to_msg_id:
-       await event.edit("```Reply to any user message.```")
+       await event.edit("Rispondi ad un messaggio.")
        return
     reply_message = await event.get_reply_message() 
     if not reply_message.media:
-       await event.edit("```reply to a media message```")
+       await event.edit("Rispondi ad un media.")
        return
     chat = "@DrWebBot"
     sender = reply_message.sender
     if reply_message.sender.bot:
-       await event.edit("```Reply to actual users message.```")
+       await event.edit("Reply to actual users message.")
        return
-    await event.edit(" `Sliding my tip, of fingers over it`")
+    await event.edit("Scanning File...")
     async with borg.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=161163358))
               await borg.forward_messages(chat, reply_message)
               response = await response 
           except YouBlockedUserError: 
-              await event.reply("```Please unblock @sangmatainfo_bot and try again```")
+              await event.reply("Sblocca @sangmatainfo_bot e riprova")
               return
           if response.text.startswith("Forward"):
-             await event.edit("```can you kindly disable your forward privacy settings for good?```")
+             await event.edit("errore impostazioni forward")
           else:
           	if response.text.startswith("Select"):
-          		await event.edit("`Please go to` @DrWebBot `and select your language.`") 
+          		await event.edit("Seleziona una lingua su: @DrWebBot") 
           	else: 
-          			await event.edit(f"**Antivirus scan was completed. I got dem final results.**\n {response.message.message}")
+          			await event.edit(f"**Scansione Completata. Risultati: **\n {response.message.message}")
