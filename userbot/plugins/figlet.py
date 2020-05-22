@@ -12,13 +12,13 @@ async def figlet(event):
         cmd = None
         text = input_str
     else:
-        await event.edit("Please add some text to figlet")
+        await event.edit("Aggiungi un testo!")
         return
     if cmd is not None:
         try:
             font = CMD_FIG[cmd]
         except KeyError:
-            await event.edit("Invalid selected font.")
+            await event.edit("Tipo di font invalido")
             return
         result = pyfiglet.figlet_format(text, font=font)
     else:
