@@ -1,9 +1,6 @@
 """Emoji
 Available Commands:
-.emoji shrug
-.emoji apple
-.emoji :/
-.emoji -_-"""
+.fuck"""
 
 from telethon import events
 from userbot.utils import admin_cmd
