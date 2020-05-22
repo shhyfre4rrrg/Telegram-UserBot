@@ -11,7 +11,7 @@ from userbot.utils import admin_cmd
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"
 
 
-@borg.on(admin_cmd(pattern=r"police"))
+@borg.on(admin_cmd(pattern=r"pula"))
 
 async def _(event):
 
