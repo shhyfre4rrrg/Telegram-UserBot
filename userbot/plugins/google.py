@@ -24,11 +24,11 @@ def progress(current, total):
 
 @borg.on(admin_cmd("go (.*)"))
 async def _(event):
-    await event.edit("@AnonHexoUserBot - Cercando la richiesta...✍️🙇`")
+    await event.edit("UserBot - Cercando la richiesta...✍️🙇`")
     match_ = event.pattern_match.group(1)
     match = quote_plus(match_)
     if not match:
-        await event.edit("`I can't search nothing !!`")
+        await event.edit("Non posso cercare")
         return
     plain_txt = get(f"https://www.startpage.com/do/search?cmd=process_search&query={match}", 'html').text
     soup = BeautifulSoup(plain_txt, "lxml")
