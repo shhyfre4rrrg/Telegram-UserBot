@@ -12,7 +12,7 @@ async def gbun(event):
         return
     gbunVar = event.text
     gbunVar = gbunVar[6:]
-    mentions = "Attenzione!! Utente **BANNATO** da un Admin!...\n`"
+    mentions = "Attenzione!! Utente **BANNATO**...\n`"
     no_reason = "__Motivo: Non definito. __"
     await event.edit("**Hackerando il bot di Sicurezza... ❗️⚜️☠️**")
     asyncio.sleep(3.5)
@@ -32,14 +32,14 @@ async def gbun(event):
         else:
             jnl=("`Warning!! `"
                   "[{}](tg://user?id={})"
-                  " 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 da un Admin...\n\n"
-                  "**Nome del nubbo: ** __{}__\n"
+                  " è stato bannato.\n\n"
+                  "**Nome: ** __{}__\n"
                   "**ID : ** `{}`\n"
                 ).format(firstname, idd, firstname, idd)
             if usname == None:
                 jnl += "**Nubbo: ** non è neanche degno di un username -.-\n"
             elif usname != "None":
-                jnl += "**nubbo** : @{}\n".format(usname)
+                jnl += "**Tag** : @{}\n".format(usname)
             if len(gbunVar) > 0:
                 gbunm = "`{}`".format(gbunVar)
                 gbunr = "**Reason: **"+gbunm
